@@ -1,0 +1,17 @@
+version: "2"
+services:
+    image: dakku/drupal-vm-extra:1
+    volumes:
+      - ./:/var/www/drupalvm/drupal:rw,delegated
+      - pir-mysql-data:/var/lib/mysql
+    privileged: true
+    command: /lib/systemd/systemd
+    ports:
+      - 80:80
+      - 443:443
+      - 3306:3306
+      - 8025:8025
+    environment:
+      - SIMPLETEST_DB=mysql://drupal:drupal@localhost:3306/drupal
+      - SIMPLETEST_BASE_URL=http://localhost
+
