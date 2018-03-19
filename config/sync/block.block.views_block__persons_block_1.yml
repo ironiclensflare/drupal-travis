@@ -1,0 +1,24 @@
+uuid: 21c2011b-9ddf-4a5c-9640-d2c2f8944f1a
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.persons
+  module:
+    - views
+  theme:
+    - bartik
+id: views_block__persons_block_1
+theme: bartik
+region: featured_bottom_second
+weight: 0
+provider: null
+plugin: 'views_block:persons-block_1'
+settings:
+  id: 'views_block:persons-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility: {  }
